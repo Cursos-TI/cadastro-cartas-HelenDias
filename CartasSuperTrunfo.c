@@ -20,6 +20,8 @@ int main() {
   float area_1;
   float pib_1;
   int touristic_points_1;
+  float density_1;
+  float pib_per_capita_1;
 
   char estate_2[1];
   char card_code_2[10];
@@ -28,6 +30,8 @@ int main() {
   float area_2;
   float pib_2;
   int touristic_points_2;
+  float density_2;
+  float pib_per_capita_2;
 
   printf("Digite o estado:\n");
   scanf("%s", estate_1);
@@ -43,6 +47,9 @@ int main() {
   scanf("%f", &pib_1);
   printf("Digite o número de pontos turísticos:\n");
   scanf("%d", &touristic_points_1);
+
+  density_1 = population_1 / area_1;
+  pib_per_capita_1 = pib_1 / population_1;
 
   printf("\nAgora a segunda cidade\n");
 
@@ -61,21 +68,36 @@ int main() {
   printf("Digite o número de pontos turísticos:\n");
   scanf("%d", &touristic_points_2);
 
+  density_2 = population_2 / area_2;
+  pib_per_capita_2 = pib_2 / population_2;
+
   printf("\nAqui está o resumo\n");
 
   printf("\nCarta 1:"
-         "\nEstado: %s\nCódigo: %s\nNome da Cidade: %s\nPopulação: "
-         "%d\nÁrea: %.2f km²\nPIB: %.2f bilhões de reais\nNúmero de "
-         "Pontos Turísticos: %d",
+         "\nEstado: %s"
+         "\nCódigo: %s"
+         "\nNome da Cidade: %s"
+         "\nPopulação: "
+         "%d\nÁrea: %.2f km²\n"
+         "PIB: %.2f bilhões de reais"
+         "\nNúmero de Pontos Turísticos: %d"
+         "\nDensidade: %.2f hab/km²"
+         "\nPIB per capita: %.2f\n",
          estate_1, card_code_1, name_1, population_1, area_1, pib_1,
-         touristic_points_1);
+         touristic_points_1, density_1, pib_per_capita_1);
 
-  printf("\n\nCarta 2:"
-         "\nEstado: %s\nCódigo: %s\nNome da Cidade: %s\nPopulação: "
-         "%d\nÁrea: %.2f km²\nPIB: %.2f bilhões de reais\nNúmero de "
-         "Pontos Turísticos: %d\n",
+  printf("\nCarta 2:"
+         "\nEstado: %s"
+         "\nCódigo: %s"
+         "\nNome da Cidade: %s"
+         "\nPopulação: "
+         "%d\nÁrea: %.2f km²\n"
+         "PIB: %.2f bilhões de reais"
+         "\nNúmero de Pontos Turísticos: %d"
+         "\nDensidade: %.2f hab/km²"
+         "\nPIB per capita: %.2f\n",
          estate_2, card_code_2, name_2, population_2, area_2, pib_2,
-         touristic_points_2);
+         touristic_points_2, density_2, pib_per_capita_2);
 
   return 0;
 }
